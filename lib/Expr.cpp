@@ -40,7 +40,7 @@ Expected<num_t> BinopExpr::eval(const State& state) const {
   if (op() == "+") {
     return *lhsEval + *rhsEval;
   } else if (op() == "-") {
-    return *lhsEval + *rhsEval;
+    return *lhsEval - *rhsEval;
   } else if (op() == "*") {
     return *lhsEval * *rhsEval;
   } else if (op() == "/") {
@@ -48,21 +48,21 @@ Expected<num_t> BinopExpr::eval(const State& state) const {
   } else if (op() == "%") {
     return *lhsEval % *rhsEval;
   } else if (op() == "<") {
-    return int(*lhsEval < *rhsEval);
+    return num_t(*lhsEval < *rhsEval);
   } else if (op() == ">") {
-    return int(*lhsEval > *rhsEval);
+    return num_t(*lhsEval > *rhsEval);
   } else if (op() == "<=") {
-    return int(*lhsEval <= *rhsEval);
+    return num_t(*lhsEval <= *rhsEval);
   } else if (op() == ">=") {
-    return int(*lhsEval >= *rhsEval);
+    return num_t(*lhsEval >= *rhsEval);
   } else if (op() == "==") {
-    return int(*lhsEval == *rhsEval);
+    return num_t(*lhsEval == *rhsEval);
   } else if (op() == "!=") {
-    return int(*lhsEval != *rhsEval);
+    return num_t(*lhsEval != *rhsEval);
   } else if (op() == "&&") {
-    return int(bool(*lhsEval) && bool(*rhsEval));
+    return num_t(bool(*lhsEval) && bool(*rhsEval));
   } else if (op() == "!!") {
-    return int(bool(*lhsEval) || bool(*rhsEval));
+    return num_t(bool(*lhsEval) || bool(*rhsEval));
   } else {
     return make_error<StringError>("Undefined binary operator " + op(),
                                    inconvertibleErrorCode());

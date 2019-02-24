@@ -201,7 +201,7 @@ int main() {
     auto expr   = (((((var("x3")) + (let(901))) - ((let(8)) - (let(345)))) *
                   (((let(639)) * (let(420))) - ((let(236)) * (var("x0"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 85714200);
   }
 
   {
@@ -209,7 +209,7 @@ int main() {
     auto expr   = (((((var("x0")) * (var("x2"))) + ((let(776)) + (let(182)))) +
                   (((let(801)) - (var("x1"))) * ((var("x1")) * (let(490))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 78216126);
   }
 
   {
@@ -217,7 +217,7 @@ int main() {
     auto expr   = (((((var("x2")) + (let(566))) + ((var("x0")) + (var("x2")))) +
                   (((var("x2")) + (let(576))) - ((let(271)) + (var("x1"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 2940);
   }
 
   {
@@ -225,7 +225,7 @@ int main() {
     auto expr   = (((((var("x1")) - (var("x0"))) * ((let(126)) * (var("x3")))) -
                   (((let(761)) * (var("x0"))) * ((let(539)) * (let(281))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -51885685782);
   }
 
   {
@@ -233,7 +233,7 @@ int main() {
     auto expr   = (((((var("x2")) + (var("x3"))) * ((var("x1")) - (let(745)))) +
                   (((var("x0")) + (var("x3"))) - ((let(335)) + (let(449))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -356943);
   }
 
   {
@@ -241,7 +241,7 @@ int main() {
     auto expr   = (((((var("x1")) * (var("x3"))) * ((let(322)) + (let(83)))) -
                   (((var("x0")) + (var("x1"))) * ((var("x3")) * (var("x1"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -384839196);
   }
 
   {
@@ -249,7 +249,7 @@ int main() {
     auto expr   = (((((let(633)) - (var("x2"))) * ((var("x2")) + (var("x0")))) *
                   (((let(475)) - (var("x1"))) - ((let(561)) * (var("x2"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 25256663040);
   }
 
   {
@@ -260,7 +260,7 @@ int main() {
                   ((((var("x2")) - (var("x0"))) + ((let(303)) - (let(449)))) -
                    (((let(385)) + (var("x0"))) + ((let(782)) + (var("x2")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -764493341376);
   }
 
   {
@@ -272,7 +272,7 @@ int main() {
           ((((var("x0")) + (let(519))) * ((var("x3")) * (let(285)))) -
            (((var("x0")) + (let(207))) + ((var("x0")) + (var("x3")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1052215161244342);
   }
 
   {
@@ -283,7 +283,7 @@ int main() {
                   ((((var("x2")) * (var("x2"))) - ((var("x2")) + (var("x0")))) *
                    (((let(877)) - (let(509))) + ((let(419)) - (var("x1")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 5483398214);
   }
 
   {
@@ -294,7 +294,7 @@ int main() {
                   ((((var("x4")) - (let(946))) + ((let(212)) * (let(645)))) *
                    (((var("x4")) - (let(660))) + ((var("x0")) * (let(514)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -396513052110549);
   }
 
   {
@@ -305,7 +305,7 @@ int main() {
                   ((((var("x1")) - (var("x4"))) - ((var("x0")) + (var("x3")))) +
                    (((let(633)) - (var("x4"))) * ((let(501)) - (var("x2")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -127878534);
   }
 
   {
@@ -316,7 +316,7 @@ int main() {
                   ((((var("x0")) + (let(87))) + ((var("x0")) + (var("x0")))) *
                    (((var("x3")) - (let(301))) - ((let(567)) + (let(209)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -615818);
   }
 
   {
@@ -327,7 +327,7 @@ int main() {
                   ((((let(640)) + (let(266))) - ((let(768)) * (let(810)))) *
                    (((let(390)) + (let(559))) * ((let(724)) - (let(76)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -50127689595846096);
   }
 
   {
@@ -338,7 +338,7 @@ int main() {
                   ((((let(254)) + (let(726))) * ((let(542)) - (var("x1")))) *
                    (((let(228)) * (var("x2"))) + ((var("x0")) * (let(502)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 21070865361);
   }
 
   {
@@ -349,7 +349,7 @@ int main() {
                   ((((let(895)) + (let(411))) * ((var("x4")) - (var("x2")))) *
                    (((var("x1")) - (let(628))) + ((var("x0")) * (let(403)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -7198345243);
   }
 
   {
@@ -360,7 +360,7 @@ int main() {
                   ((((let(260)) + (var("x0"))) - ((var("x4")) - (var("x3")))) +
                    (((let(460)) * (let(450))) + ((var("x2")) + (var("x1")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 947588346);
   }
 
   {
@@ -376,7 +376,7 @@ int main() {
           ((((let(712)) + (let(485))) + ((let(971)) * (let(781)))) +
            (((var("x2")) * (var("x3"))) * ((var("x5")) - (let(996)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 94756902);
   }
 
   {
@@ -392,7 +392,7 @@ int main() {
           ((((var("x3")) - (var("x3"))) - ((let(599)) * (var("x4")))) -
            (((var("x5")) - (let(886))) - ((var("x4")) * (var("x3")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -525991);
   }
 
   {
@@ -408,7 +408,7 @@ int main() {
           ((((var("x5")) + (var("x2"))) * ((var("x0")) + (let(732)))) -
            (((let(396)) * (var("x5"))) * ((var("x3")) * (var("x4")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -1002302620);
   }
 
   {
@@ -424,7 +424,7 @@ int main() {
           ((((var("x4")) - (var("x2"))) + ((var("x4")) + (var("x4")))) -
            (((let(931)) - (var("x4"))) - ((var("x1")) * (var("x4")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1747914667703841);
   }
 
   {
@@ -439,7 +439,7 @@ int main() {
                   ((((let(91)) * (var("x0"))) + ((let(0)) + (var("x4")))) *
                    (((let(949)) - (let(511))) * ((var("x5")) * (let(714)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -21857977456226);
   }
 
   {
@@ -454,7 +454,7 @@ int main() {
                   ((((let(895)) * (var("x2"))) * ((var("x4")) - (var("x1")))) *
                    (((let(179)) - (var("x1"))) * ((var("x5")) + (let(470)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -6756188561647200);
   }
 
   {
@@ -469,7 +469,7 @@ int main() {
                   ((((var("x3")) * (let(644))) - ((var("x1")) * (let(182)))) +
                    (((let(387)) + (let(662))) - ((let(321)) - (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 260030);
   }
 
   {
@@ -484,7 +484,7 @@ int main() {
                   ((((let(960)) * (let(482))) - ((var("x3")) - (var("x2")))) -
                    (((var("x1")) * (var("x3"))) + ((let(704)) * (let(869)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -382591);
   }
 
   {
@@ -500,7 +500,7 @@ int main() {
           ((((let(748)) - (var("x2"))) - ((var("x4")) * (var("x0")))) *
            (((var("x1")) + (var("x3"))) + ((let(392)) + (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 19004856578);
   }
 
   {
@@ -516,7 +516,7 @@ int main() {
           ((((var("x2")) * (var("x2"))) + ((var("x5")) - (let(7)))) -
            (((var("x5")) - (var("x5"))) + ((let(295)) - (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -372008);
   }
 
   {
@@ -537,7 +537,7 @@ int main() {
            ((((let(831)) * (var("x6"))) * ((let(423)) - (var("x4")))) *
             (((var("x4")) + (let(584))) + ((var("x1")) * (let(282))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 55605271039900730);
   }
 
   {
@@ -558,112 +558,7 @@ int main() {
            ((((let(472)) + (let(689))) - ((let(401)) * (var("x6")))) -
             (((let(410)) - (var("x4"))) + ((let(118)) - (var("x6"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 48},
-                   {"x1", 182},
-                   {"x2", 660},
-                   {"x3", 388},
-                   {"x4", 19},
-                   {"x5", 893},
-                   {"x6", 40}};
-    auto expr =
-        (((((((var("x2")) - (let(267))) + ((let(775)) + (let(400)))) *
-            (((let(987)) - (var("x1"))) + ((var("x3")) * (let(525))))) *
-           ((((let(401)) * (let(360))) + ((let(659)) * (let(900)))) *
-            (((var("x3")) - (var("x6"))) * ((var("x3")) + (var("x5")))))) -
-          (((((let(288)) - (var("x0"))) + ((let(8)) * (let(172)))) +
-            (((let(376)) * (let(547))) - ((var("x1")) * (var("x6"))))) -
-           ((((let(543)) - (let(532))) - ((var("x0")) + (var("x5")))) -
-            (((let(382)) + (var("x6"))) * ((let(48)) * (var("x0"))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 694},
-                   {"x1", 320},
-                   {"x2", 664},
-                   {"x3", 177},
-                   {"x4", 276},
-                   {"x5", 915},
-                   {"x6", 522}};
-    auto expr =
-        (((((((var("x5")) + (let(925))) * ((let(670)) - (let(385)))) *
-            (((let(720)) - (var("x3"))) + ((let(717)) - (var("x2"))))) -
-           ((((var("x3")) + (let(775))) * ((var("x3")) - (let(656)))) *
-            (((let(457)) * (let(230))) - ((var("x0")) * (let(93)))))) -
-          (((((var("x1")) * (let(659))) - ((var("x1")) * (var("x0")))) *
-            (((var("x1")) * (let(669))) * ((let(321)) - (let(768))))) *
-           ((((let(529)) * (let(892))) - ((var("x4")) - (let(692)))) *
-            (((let(10)) + (var("x3"))) + ((let(620)) - (var("x0"))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 177},
-                   {"x1", 721},
-                   {"x2", 934},
-                   {"x3", 491},
-                   {"x4", 855},
-                   {"x5", 334},
-                   {"x6", 556}};
-    auto expr =
-        (((((((let(883)) - (let(256))) * ((var("x3")) + (let(464)))) *
-            (((let(427)) * (let(734))) * ((let(753)) * (let(335))))) *
-           ((((var("x0")) + (var("x0"))) + ((let(362)) + (var("x4")))) +
-            (((let(551)) - (let(650))) + ((var("x0")) + (var("x6")))))) -
-          (((((let(959)) * (let(440))) + ((let(687)) * (let(87)))) +
-            (((var("x4")) * (let(318))) + ((var("x2")) * (let(700))))) -
-           ((((let(66)) * (let(69))) - ((let(346)) + (let(226)))) -
-            (((var("x5")) * (let(223))) - ((var("x0")) - (var("x1"))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 505},
-                   {"x1", 760},
-                   {"x2", 119},
-                   {"x3", 375},
-                   {"x4", 900},
-                   {"x5", 53},
-                   {"x6", 857}};
-    auto expr =
-        (((((((let(254)) * (let(669))) + ((let(646)) + (var("x3")))) *
-            (((let(413)) - (let(783))) * ((let(17)) + (var("x5"))))) -
-           ((((let(162)) + (let(310))) - ((let(927)) - (var("x5")))) *
-            (((let(336)) + (var("x3"))) - ((var("x4")) - (var("x1")))))) *
-          (((((var("x6")) - (let(95))) * ((let(72)) + (let(811)))) -
-            (((let(569)) + (let(952))) * ((var("x2")) * (let(523))))) *
-           ((((var("x4")) - (let(70))) - ((let(583)) + (let(620)))) +
-            (((let(994)) - (var("x5"))) - ((var("x6")) - (let(989))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 366},
-                   {"x1", 284},
-                   {"x2", 829},
-                   {"x3", 703},
-                   {"x4", 565},
-                   {"x5", 603},
-                   {"x6", 7}};
-    auto expr =
-        (((((((var("x1")) * (let(977))) * ((let(483)) * (var("x3")))) -
-            (((let(11)) + (let(72))) * ((var("x1")) - (let(502))))) *
-           ((((let(24)) - (var("x2"))) * ((let(187)) + (var("x2")))) +
-            (((var("x3")) - (let(876))) - ((let(520)) - (var("x5")))))) *
-          (((((let(735)) + (let(271))) - ((let(477)) - (let(186)))) +
-            (((let(308)) + (let(298))) * ((let(950)) + (var("x5"))))) *
-           ((((var("x5")) * (var("x3"))) + ((let(903)) - (let(521)))) +
-            (((var("x5")) - (var("x0"))) + ((let(203)) * (let(63))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1682611700987842);
   }
 
   {
@@ -684,7 +579,7 @@ int main() {
            ((((var("x5")) + (let(624))) * ((var("x0")) + (var("x4")))) *
             (((var("x1")) * (let(392))) - ((let(884)) + (let(656))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -3443733562308592);
   }
 
   {
@@ -705,28 +600,7 @@ int main() {
            ((((var("x4")) * (let(501))) * ((var("x1")) - (let(653)))) *
             (((let(795)) + (var("x1"))) - ((var("x3")) - (let(722))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
-  }
-
-  {
-    State state = {{"x0", 166},
-                   {"x1", 338},
-                   {"x2", 85},
-                   {"x3", 858},
-                   {"x4", 664},
-                   {"x5", 187},
-                   {"x6", 566}};
-    auto expr =
-        (((((((let(101)) * (let(735))) + ((var("x5")) - (let(951)))) *
-            (((var("x1")) * (let(557))) - ((var("x0")) - (var("x4"))))) *
-           ((((let(23)) + (var("x0"))) + ((let(237)) - (var("x6")))) +
-            (((let(338)) * (let(64))) * ((var("x0")) - (var("x3")))))) *
-          (((((let(24)) + (var("x6"))) + ((let(871)) + (var("x1")))) -
-            (((var("x1")) + (let(689))) * ((let(599)) - (var("x4"))))) +
-           ((((var("x5")) + (let(485))) + ((var("x0")) - (var("x5")))) +
-            (((var("x2")) + (let(903))) - ((let(268)) * (var("x1"))))))));
-    auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 138411798956);
   }
 
   {
@@ -748,7 +622,7 @@ int main() {
            ((((var("x2")) + (let(740))) * ((var("x4")) * (let(496)))) +
             (((var("x6")) - (let(42))) * ((let(719)) * (let(543))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -5689445018333020);
   }
 
   {
@@ -756,7 +630,7 @@ int main() {
     auto expr   = (((((var("x2")) + (let(869))) - ((var("x1")) > (let(308)))) +
                   (((var("x1")) || (var("x0"))) >= ((var("x0")) + (let(0))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1750);
   }
 
   {
@@ -765,7 +639,7 @@ int main() {
         (((((var("x0")) - (let(523))) < ((let(723)) == (let(961)))) *
           (((var("x1")) != (var("x1"))) || ((let(130)) >= (let(627))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -773,7 +647,7 @@ int main() {
     auto expr   = (((((var("x1")) > (var("x1"))) + ((var("x1")) - (let(88)))) +
                   (((let(535)) > (var("x0"))) < ((let(565)) >= (var("x2"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -20);
   }
 
   {
@@ -782,7 +656,7 @@ int main() {
         (((((var("x1")) + (let(350))) || ((var("x1")) != (let(634)))) ==
           (((var("x2")) <= (let(860))) >= ((var("x0")) || (var("x1"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -790,7 +664,7 @@ int main() {
     auto expr   = (((((var("x1")) && (let(927))) < ((let(742)) < (let(390)))) >
                   (((let(2)) > (var("x1"))) * ((var("x2")) >= (let(879))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -799,7 +673,7 @@ int main() {
         (((((let(305)) >= (let(820))) >= ((let(9)) != (let(528)))) !=
           (((var("x2")) >= (let(727))) == ((var("x2")) && (var("x0"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -807,7 +681,7 @@ int main() {
     auto expr = (((((var("x2")) > (let(215))) == ((var("x2")) * (var("x0")))) <
                   (((var("x0")) - (let(809))) != ((let(993)) != (let(437))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -815,7 +689,7 @@ int main() {
     auto expr   = (((((let(135)) > (var("x2"))) > ((let(925)) && (let(179)))) >=
                   (((var("x2")) || (let(396))) < ((var("x2")) >= (let(85))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -823,7 +697,7 @@ int main() {
     auto expr = (((((var("x0")) > (var("x1"))) >= ((let(113)) * (let(551)))) &&
                   (((let(910)) < (let(324))) > ((let(814)) - (var("x2"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -831,7 +705,7 @@ int main() {
     auto expr = (((((var("x0")) + (let(955))) || ((var("x2")) || (var("x2")))) *
                   (((var("x1")) || (var("x0"))) > ((var("x2")) + (let(118))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -840,7 +714,7 @@ int main() {
         (((((var("x3")) || (let(564))) || ((let(636)) + (let(543)))) !=
           (((var("x0")) != (var("x1"))) - ((var("x3")) && (var("x1"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -848,7 +722,7 @@ int main() {
     auto expr = (((((let(543)) > (let(850))) * ((var("x2")) >= (var("x3")))) ||
                   (((let(459)) == (var("x2"))) != ((let(314)) > (let(77))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -856,7 +730,7 @@ int main() {
     auto expr   = (((((let(924)) && (let(260))) - ((let(54)) != (var("x0")))) ||
                   (((let(307)) || (var("x3"))) * ((let(94)) - (let(299))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -864,7 +738,7 @@ int main() {
     auto expr   = (((((let(298)) - (let(423))) || ((let(394)) < (let(502)))) !=
                   (((let(369)) != (let(462))) - ((var("x2")) <= (let(621))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -872,7 +746,7 @@ int main() {
     auto expr = (((((var("x0")) > (let(95))) && ((var("x1")) < (var("x3")))) ||
                   (((var("x2")) || (let(223))) || ((var("x2")) + (let(857))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -880,7 +754,7 @@ int main() {
     auto expr   = (((((let(54)) > (let(174))) || ((var("x1")) > (var("x1")))) >=
                   (((var("x2")) && (let(928))) >= ((let(612)) - (let(285))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -888,7 +762,7 @@ int main() {
     auto expr = (((((let(253)) <= (let(595))) <= ((var("x1")) < (var("x2")))) <
                   (((let(691)) < (let(573))) <= ((var("x0")) && (let(954))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -896,7 +770,7 @@ int main() {
     auto expr = (((((let(235)) <= (var("x2"))) + ((var("x1")) + (var("x3")))) ==
                   (((var("x3")) * (let(353))) < ((var("x2")) && (let(984))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -904,7 +778,7 @@ int main() {
     auto expr = (((((var("x3")) != (var("x3"))) - ((let(264)) && (var("x3")))) >
                   (((let(258)) || (let(710))) < ((let(743)) * (var("x3"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -913,7 +787,7 @@ int main() {
         (((((let(180)) && (var("x1"))) == ((var("x1")) || (var("x0")))) -
           (((let(552)) - (let(164))) && ((var("x1")) == (var("x1"))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -925,7 +799,7 @@ int main() {
           ((((var("x4")) && (let(587))) * ((let(107)) - (let(233)))) ||
            (((var("x0")) > (var("x2"))) + ((var("x0")) - (let(445)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -937,7 +811,7 @@ int main() {
           ((((var("x1")) || (let(269))) != ((let(888)) > (let(485)))) >=
            (((var("x0")) - (var("x0"))) != ((var("x0")) || (let(771)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -949,7 +823,7 @@ int main() {
           ((((let(971)) * (var("x3"))) != ((let(706)) <= (let(929)))) !=
            (((var("x2")) || (var("x3"))) > ((var("x4")) && (let(927)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -961,7 +835,7 @@ int main() {
           ((((var("x0")) <= (var("x4"))) && ((var("x4")) - (var("x0")))) >=
            (((var("x1")) <= (var("x1"))) != ((var("x2")) * (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -973,7 +847,7 @@ int main() {
           ((((let(262)) + (var("x3"))) > ((var("x2")) > (var("x2")))) +
            (((let(394)) > (var("x2"))) == ((let(697)) == (let(844)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 3);
   }
 
   {
@@ -985,7 +859,7 @@ int main() {
           ((((var("x2")) != (var("x4"))) >= ((var("x3")) != (let(182)))) !=
            (((var("x1")) >= (let(386))) < ((let(214)) && (let(140)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -997,7 +871,7 @@ int main() {
           ((((var("x3")) != (let(677))) != ((var("x0")) * (var("x0")))) ||
            (((var("x3")) * (let(326))) && ((let(890)) >= (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1009,7 +883,7 @@ int main() {
           ((((let(470)) - (let(978))) > ((let(228)) == (let(155)))) &&
            (((let(949)) != (let(856))) && ((let(720)) != (let(743)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1021,7 +895,7 @@ int main() {
           ((((var("x4")) - (var("x0"))) >= ((let(578)) <= (var("x2")))) -
            (((var("x2")) != (var("x3"))) - ((let(190)) > (var("x1")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1033,7 +907,7 @@ int main() {
           ((((let(186)) <= (var("x3"))) >= ((var("x4")) == (let(931)))) -
            (((var("x1")) + (let(185))) && ((var("x4")) < (let(986)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1049,7 +923,7 @@ int main() {
           ((((let(103)) - (var("x1"))) >= ((var("x3")) < (let(78)))) *
            (((let(108)) > (var("x2"))) + ((let(159)) <= (var("x3")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1065,7 +939,7 @@ int main() {
           ((((var("x1")) == (let(755))) > ((var("x2")) && (var("x1")))) *
            (((var("x2")) < (let(785))) < ((var("x5")) >= (var("x5")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1081,7 +955,7 @@ int main() {
           ((((let(689)) - (var("x5"))) + ((let(135)) && (var("x3")))) ||
            (((var("x5")) && (let(49))) != ((var("x5")) <= (var("x5")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1097,7 +971,7 @@ int main() {
           ((((var("x5")) && (var("x1"))) + ((var("x4")) == (var("x3")))) ==
            (((var("x0")) && (let(217))) - ((var("x4")) && (var("x2")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1113,7 +987,7 @@ int main() {
           ((((let(205)) < (let(120))) * ((var("x0")) > (var("x1")))) *
            (((var("x1")) < (var("x5"))) >= ((var("x2")) < (let(553)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1129,7 +1003,7 @@ int main() {
           ((((let(145)) < (let(346))) * ((var("x1")) || (let(127)))) +
            (((var("x2")) != (let(676))) <= ((var("x5")) <= (var("x5")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1145,7 +1019,7 @@ int main() {
           ((((var("x2")) < (var("x4"))) >= ((let(529)) != (var("x2")))) ||
            (((let(976)) - (var("x5"))) && ((var("x5")) != (var("x2")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1161,7 +1035,7 @@ int main() {
           ((((var("x5")) > (let(171))) < ((var("x2")) * (var("x4")))) ||
            (((var("x1")) < (let(289))) || ((var("x4")) * (var("x4")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1177,7 +1051,7 @@ int main() {
           ((((var("x5")) < (let(699))) + ((let(851)) - (let(162)))) +
            (((let(328)) <= (let(920))) || ((var("x3")) >= (let(68)))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == -690);
   }
 
   {
@@ -1193,7 +1067,7 @@ int main() {
           ((((let(332)) < (let(463))) + ((let(548)) <= (var("x0")))) ||
            (((let(69)) >= (var("x0"))) > ((var("x0")) <= (var("x0")))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1214,7 +1088,7 @@ int main() {
            ((((var("x5")) || (let(151))) && ((let(35)) - (let(866)))) *
             (((let(231)) || (let(335))) >= ((let(492)) == (let(477))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1235,7 +1109,7 @@ int main() {
            ((((var("x0")) && (let(214))) && ((let(208)) + (let(789)))) &&
             (((let(519)) - (var("x3"))) <= ((var("x1")) != (var("x3"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1256,7 +1130,7 @@ int main() {
            ((((let(884)) > (var("x5"))) || ((let(21)) - (let(707)))) -
             (((let(873)) < (var("x4"))) + ((let(685)) * (var("x6"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1277,7 +1151,7 @@ int main() {
            ((((var("x3")) >= (let(276))) + ((var("x3")) < (let(491)))) >
             (((let(576)) > (var("x2"))) <= ((var("x6")) > (var("x3"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1298,7 +1172,7 @@ int main() {
            ((((let(783)) <= (var("x2"))) + ((let(937)) || (let(849)))) ||
             (((var("x6")) >= (var("x4"))) >= ((let(437)) * (var("x3"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1319,7 +1193,7 @@ int main() {
            ((((var("x4")) || (var("x4"))) || ((var("x6")) - (let(115)))) &&
             (((var("x2")) + (let(854))) + ((var("x2")) >= (var("x0"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1340,7 +1214,7 @@ int main() {
            ((((var("x4")) * (let(615))) > ((let(593)) * (let(884)))) &&
             (((let(248)) || (let(534))) + ((let(936)) <= (var("x1"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 1);
   }
 
   {
@@ -1361,7 +1235,7 @@ int main() {
            ((((let(984)) * (var("x0"))) - ((let(708)) != (let(151)))) >
             (((var("x1")) == (let(696))) || ((let(599)) < (var("x4"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1382,7 +1256,7 @@ int main() {
            ((((var("x2")) || (var("x6"))) != ((let(337)) - (let(365)))) *
             (((let(147)) >= (let(774))) && ((var("x2")) >= (let(971))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1403,7 +1277,7 @@ int main() {
            ((((var("x2")) + (let(515))) * ((let(127)) * (let(360)))) <
             (((var("x4")) || (var("x4"))) == ((var("x4")) < (var("x5"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   {
@@ -1425,7 +1299,7 @@ int main() {
            ((((let(280)) <= (var("x4"))) < ((var("x5")) == (var("x7")))) <
             (((var("x2")) > (let(511))) - ((var("x2")) < (var("x4"))))))));
     auto result = expr->eval(state);
-    assert(result && *result == 12345);
+    assert(result && *result == 0);
   }
 
   return 0;
