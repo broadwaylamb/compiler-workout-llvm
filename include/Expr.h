@@ -16,6 +16,7 @@
 #include "llvm/ADT/StringRef.h"
 #include "llvm/Support/Casting.h"
 #include "llvm/Support/Error.h"
+#include "llvm/Support/raw_ostream.h"
 
 #include <memory>
 
@@ -24,6 +25,8 @@ namespace compiler_workout {
 using num_t = int64_t;
 
 using State = llvm::StringMap<num_t>;
+
+struct ExprPrinter;
 
 struct Expr {
 
@@ -34,9 +37,13 @@ struct Expr {
 
   virtual llvm::Expected<num_t> eval(const State& state) const = 0;
 
+  virtual void acceptPrinter(ExprPrinter& printer) const = 0;
+
+  void dump(llvm::raw_ostream& stream = llvm::outs()) const;
+
   ExprKind kind() const { return kind_; }
 
-  virtual ~Expr();
+  virtual ~Expr() {}
 
 private:
   const ExprKind kind_;
@@ -49,6 +56,8 @@ struct ConstExpr : Expr {
   num_t value() const { return value_; }
 
   virtual llvm::Expected<num_t> eval(const State& state) const override;
+
+  virtual void acceptPrinter(ExprPrinter& printer) const override;
 
 private:
   const num_t value_;
@@ -66,6 +75,8 @@ struct VarExpr : Expr {
   llvm::StringRef name() const { return name_; }
 
   virtual llvm::Expected<num_t> eval(const State& state) const override;
+
+  virtual void acceptPrinter(ExprPrinter& printer) const override;
 
 private:
   const llvm::StringRef name_;
@@ -90,6 +101,8 @@ struct BinopExpr : Expr {
 
   virtual llvm::Expected<num_t> eval(const State& state) const override;
 
+  virtual void acceptPrinter(ExprPrinter& printer) const override;
+
 private:
   const llvm::StringRef op_;
   const std::unique_ptr<const Expr> lhs_;
@@ -100,6 +113,39 @@ public:
     return expr->kind() == ExprKind_Binop;
   }
 };
+
+struct ExprPrinter {
+
+  virtual void printConstExpr(const ConstExpr& expr) = 0;
+
+  virtual void printVarExpr(const VarExpr& expr) = 0;
+
+  virtual void printBinopExpr(const BinopExpr& expr) = 0;
+
+  virtual ~ExprPrinter() {}
+};
+
+struct StreamExprPrinter : ExprPrinter {
+
+  StreamExprPrinter(llvm::raw_ostream& stream, bool disableColors = false);
+
+  virtual void printConstExpr(const ConstExpr& expr) override;
+
+  virtual void printVarExpr(const VarExpr& expr) override;
+
+  virtual void printBinopExpr(const BinopExpr& expr) override;
+
+private:
+  void printExprPre();
+
+  void printExprPost(bool indentClosingBrace = false);
+
+private:
+  llvm::raw_ostream& output_;
+  unsigned depth_;
+  bool disableColors_;
+};
+
 } // namespace compiler_workout
 
 #endif /* compiler_workout_llvm_Expr_h */
