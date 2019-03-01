@@ -25,10 +25,12 @@ set(HEADERS_DIR include)
 set(TEST_DIR tests)
 
 # SOURCES
-set(SOURCES ${SOURCES_DIR}/Expr.cpp)
+set(SOURCES ${SOURCES_DIR}/Expr.cpp
+            ${SOURCES_DIR}/ASTPrinter.cpp)
 
 # HEADERS
-set(HEADERS ${HEADERS_DIR}/Expr.h)
+set(HEADERS ${HEADERS_DIR}/Expr.h
+            ${HEADERS_DIR}/ASTPrinter.h)
 
 # TESTS
 set(TESTS "${TESTS}${TEST_DIR}/test_Expr.cpp")
