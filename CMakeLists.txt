@@ -26,10 +26,12 @@ set(TEST_DIR tests)
 
 # SOURCES
 set(SOURCES ${SOURCES_DIR}/Expr.cpp
+            ${SOURCES_DIR}/Stmt.cpp
             ${SOURCES_DIR}/ASTPrinter.cpp)
 
 # HEADERS
 set(HEADERS ${HEADERS_DIR}/Expr.h
+            ${HEADERS_DIR}/Stmt.h
             ${HEADERS_DIR}/ASTPrinter.h)
 
 # TESTS

@@ -12,7 +12,7 @@
 #ifndef compiler_workout_llvm_ASTPrinter_h
 #define compiler_workout_llvm_ASTPrinter_h
 
-#include "Expr.h"
+#include "Stmt.h"
 
 namespace compiler_workout {
 
@@ -23,6 +23,12 @@ struct ASTPrinter {
   virtual void printVarExpr(const VarExpr& expr) = 0;
 
   virtual void printBinopExpr(const BinopExpr& expr) = 0;
+
+  virtual void printReadStmt(const ReadStmt& stmt) = 0;
+
+  virtual void printWriteStmt(const WriteStmt& stmt) = 0;
+
+  virtual void printAssignStmt(const AssignStmt& stmt) = 0;
 
   virtual ~ASTPrinter() {}
 };
@@ -37,10 +43,16 @@ struct StreamASTPrinter : ASTPrinter {
 
   virtual void printBinopExpr(const BinopExpr& expr) override;
 
-private:
-  void printExprPre();
+  virtual void printReadStmt(const ReadStmt& stmt) override;
 
-  void printExprPost(bool indentClosingBrace = false);
+  virtual void printWriteStmt(const WriteStmt& stmt) override;
+
+  virtual void printAssignStmt(const AssignStmt& stmt) override;
+
+private:
+  void printPre();
+
+  void printPost(bool indentClosingBrace = false);
 
 private:
   llvm::raw_ostream& output_;

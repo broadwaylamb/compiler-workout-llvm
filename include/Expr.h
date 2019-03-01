@@ -19,6 +19,7 @@
 #include "llvm/Support/raw_ostream.h"
 
 #include <memory>
+#include <string>
 
 namespace compiler_workout {
 
@@ -79,7 +80,7 @@ struct VarExpr : Expr {
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
 private:
-  const llvm::StringRef name_;
+  const std::string name_;
 
 public:
   static bool classof(const Expr* expr) { return expr->kind() == ExprKind_Var; }
@@ -104,7 +105,7 @@ struct BinopExpr : Expr {
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
 private:
-  const llvm::StringRef op_;
+  const std::string op_;
   const std::unique_ptr<const Expr> lhs_;
   const std::unique_ptr<const Expr> rhs_;
 
