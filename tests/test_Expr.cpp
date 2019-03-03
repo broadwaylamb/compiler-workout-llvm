@@ -180,7 +180,7 @@ Error eval(StateGenerator stateGen, std::unique_ptr<Expr> expr, Check check) {
 
     State currentState;
 
-    for (auto& statement : reads) {
+    for (auto& statement : assignments) {
       if (auto error = statement->eval(currentState, input, output)) {
         return error;
       }
