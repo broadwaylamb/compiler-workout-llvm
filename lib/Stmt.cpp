@@ -41,8 +41,13 @@ Error WriteStmt::eval(State& state,
                       std::ostream& output) const {
 
   if (auto result = expr().eval(state)) {
-    output << *result;
-    return Error::success();
+    output << *result << ' ';
+    if (output.fail()) {
+      return make_error<llvm::StringError>("IO error",
+                                           inconvertibleErrorCode());
+    } else {
+      return Error::success();
+    }
   } else {
     return result.takeError();
   }
