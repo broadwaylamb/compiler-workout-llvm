@@ -36,8 +36,6 @@ struct Expr {
 
   Expr(ExprKind kind) : kind_(kind) {}
 
-  virtual llvm::Expected<num_t> eval(const State& state) const = 0;
-
   virtual void acceptPrinter(ASTPrinter& printer) const = 0;
 
   void dump(llvm::raw_ostream& stream = llvm::outs()) const;
@@ -56,8 +54,6 @@ struct ConstExpr : Expr {
 
   num_t value() const { return value_; }
 
-  virtual llvm::Expected<num_t> eval(const State& state) const override;
-
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
 private:
@@ -74,8 +70,6 @@ struct VarExpr : Expr {
   VarExpr(llvm::StringRef name) : Expr(ExprKind_Var), name_(name) {}
 
   llvm::StringRef name() const { return name_; }
-
-  virtual llvm::Expected<num_t> eval(const State& state) const override;
 
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
@@ -99,8 +93,6 @@ struct BinopExpr : Expr {
   const Expr& lhs() const { return *lhs_; }
 
   const Expr& rhs() const { return *rhs_; }
-
-  virtual llvm::Expected<num_t> eval(const State& state) const override;
 
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 

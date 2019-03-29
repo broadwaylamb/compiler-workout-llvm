@@ -34,9 +34,6 @@ set(HEADERS ${HEADERS_DIR}/Expr.h
             ${HEADERS_DIR}/Stmt.h
             ${HEADERS_DIR}/ASTPrinter.h)
 
-# TESTS
-set(TESTS "${TESTS}${TEST_DIR}/test_Expr.cpp")
-
 set(LIBRARY_NAME compiler-workout-llvm)
 
 add_library(${LIBRARY_NAME} ${SOURCES} ${HEADERS})
@@ -44,16 +41,6 @@ target_include_directories(${LIBRARY_NAME} PUBLIC ${HEADERS_DIR})
 
 # Link against LLVM libraries
 target_link_libraries(${LIBRARY_NAME} ${LLVM_LIBS})
-
-foreach(TEST_FILE_NAME ${TESTS})
-  get_filename_component(TEST_NAME ${TEST_FILE_NAME} NAME_WE)
-  set(TEST_TARGET_NAMES ${TEST_TARGET_NAMES} ${TEST_NAME})
-  add_executable(${TEST_NAME} ${TEST_FILE_NAME})
-  target_include_directories(${TEST_NAME} PUBLIC ${HEADERS_DIR})
-  target_include_directories(${TEST_NAME} PUBLIC ${TEST_DIR}/include)
-  target_link_libraries(${TEST_NAME} ${LIBRARY_NAME})
-  set_target_properties(${TEST_NAME} PROPERTIES FOLDER Tests)
-endforeach(TEST_FILE_NAME)
 
 find_program(CLANG_FORMAT NAMES clang-format)
 
@@ -68,6 +55,4 @@ if(CLANG_FORMAT)
 endif(CLANG_FORMAT)
 
 enable_testing()
-foreach(TEST_TARGET ${TEST_TARGET_NAMES})
-  add_test(NAME ${TEST_TARGET} COMMAND ${TEST_TARGET})
-endforeach(TEST_TARGET)
+

@@ -29,9 +29,6 @@ struct Stmt {
 
   Stmt(StmtKind kind) : kind_(kind) {}
 
-  virtual llvm::Error
-  eval(State& state, std::istream& input, std::ostream& output) const = 0;
-
   virtual void acceptPrinter(ASTPrinter& printer) const = 0;
 
   void dump(llvm::raw_ostream& stream = llvm::outs()) const;
@@ -50,9 +47,6 @@ struct ReadStmt : Stmt {
 
   llvm::StringRef varName() const { return varName_; }
 
-  virtual llvm::Error
-  eval(State& state, std::istream& input, std::ostream& output) const override;
-
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
 private:
@@ -70,9 +64,6 @@ struct WriteStmt : Stmt {
       : Stmt(StmtKind_Write), expr_(std::move(expr)) {}
 
   const Expr& expr() const { return *expr_; }
-
-  virtual llvm::Error
-  eval(State& state, std::istream& input, std::ostream& output) const override;
 
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 
@@ -93,9 +84,6 @@ struct AssignStmt : Stmt {
   llvm::StringRef varName() const { return varName_; }
 
   const Expr& expr() const { return *expr_; }
-
-  virtual llvm::Error
-  eval(State& state, std::istream& input, std::ostream& output) const override;
 
   virtual void acceptPrinter(ASTPrinter& printer) const override;
 

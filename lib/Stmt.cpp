@@ -21,51 +21,12 @@ void Stmt::dump(raw_ostream& stream) const {
   acceptPrinter(printer);
 }
 
-Error ReadStmt::eval(State& state,
-                     std::istream& input,
-                     [[maybe_unused]] std::ostream& output) const {
-
-  num_t number;
-  input >> number;
-  state.try_emplace(varName(), number);
-
-  return Error::success();
-}
-
 void ReadStmt::acceptPrinter(ASTPrinter& printer) const {
   printer.printReadStmt(*this);
 }
 
-Error WriteStmt::eval(State& state,
-                      [[maybe_unused]] std::istream& input,
-                      std::ostream& output) const {
-
-  if (auto result = expr().eval(state)) {
-    output << *result << ' ';
-    if (output.fail()) {
-      return make_error<llvm::StringError>("IO error",
-                                           inconvertibleErrorCode());
-    } else {
-      return Error::success();
-    }
-  } else {
-    return result.takeError();
-  }
-}
-
 void WriteStmt::acceptPrinter(ASTPrinter& printer) const {
   printer.printWriteStmt(*this);
-}
-
-Error AssignStmt::eval(State& state,
-                       [[maybe_unused]] std::istream& input,
-                       [[maybe_unused]] std::ostream& output) const {
-  if (auto result = expr().eval(state)) {
-    state.try_emplace(varName(), *result);
-    return Error::success();
-  } else {
-    return result.takeError();
-  }
 }
 
 void AssignStmt::acceptPrinter(ASTPrinter& printer) const {
